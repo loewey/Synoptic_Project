@@ -1,0 +1,281 @@
+/* Resetting default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+html,
+body {
+    height: 100%;
+    background-color: #d9d9d9;
+    color: #404040;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: white;
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo_flex {
+    display: flex;
+    align-items: center;
+}
+
+.logo_image img {
+    height: 130px;
+    width: 130px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+#primary_nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+}
+
+.primary_nav {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.primary_nav li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.primary_nav li a {
+    text-decoration: none;
+    color: #404040;
+    transition: color 0.3s ease;
+}
+
+.primary_nav li a:hover {
+    color: #B30000;
+}
+
+/* Main content */
+main {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-link {
+    display: inline-block;
+    margin: 20px;
+    transition: transform 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    color: #404040;
+}
+
+.button-link img {
+    max-width: 100%;
+}
+
+.button-link:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background-color: #B30000;
+    font-size: 0.7em;
+    text-align: center;
+    color: #fff9e8;
+    padding: 16px;
+}
+
+footer .footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .footer-links li {
+    margin: 0 10px;
+}
+
+footer .footer-links li a {
+    text-decoration: none;
+    color: #fff9e8;
+    transition: color 0.3s ease;
+}
+
+footer .footer-links li a:hover {
+    color: #d9d9d9;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.avatar-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-link p {
+    margin-top: 10px;
+}
+
+/* Flip card container */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.solution-image {
+    width: 110%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* New styles for the avatar container and body parts */
+.avatar-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-container img {
+    width: 100%;
+    height: auto;
+}
+
+.body-part {
+    position: absolute;
+    background: rgba(255, 0, 0, 0);
+    /* Transparent background */
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Add hover effect to indicate the clickable area */
+.body-part:hover {
+    background: rgba(255, 0, 0, 0.3);
+    /* Semi-transparent red overlay on hover */
+}
+
+.head {
+    top: 9%;
+    left: 36%;
+    width: 20%;
+    height: 14%;
+}
+
+.left-arm {
+    top: 23%;
+    left: 10%;
+    width: 15%;
+    height: 35%;
+}
+
+.right-arm {
+    top: 23%;
+    right: 18%;
+    width: 15%;
+    height: 35%;
+}
+
+.torso {
+    top: 23%;
+    left: 25%;
+    width: 42%;
+    height: 31%;
+}
+
+.left-leg {
+    top: 54%;
+    left: 25%;
+    width: 20%;
+    height: 37%;
+}
+
+.right-leg {
+    top: 54%;
+    right: 33%;
+    width: 20%;
+    height: 37%;
+}
+
+.snav {
+    list-style: none;
+}
