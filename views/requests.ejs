@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title><%=title%></title>
+        <style>
+            #requests {
+              font-family: Arial, Helvetica, sans-serif;
+              border-collapse: collapse;
+              width: 100%;
+            }
+            
+            #requests td, #requests th {
+              border: 1px solid #ddd;
+              padding: 8px;
+            }
+            
+            #requests tr:nth-child(even){background-color: #f2f2f2;}
+            
+            #requests tr:hover {background-color: #ddd;}
+            
+            #requests th {
+              padding-top: 12px;
+              padding-bottom: 12px;
+              text-align: left;
+              background-color: #04AA6D;
+              color: white;
+            }
+        </style>
+	</head>
+    <body>
+        <a href="/form">Add a request</a>
+        <br></br>
+        <% if(requestType == "name"){%>
+            <a href="/requests">All requests</a>
+        <%} %>
+        <br></br>
+        <form id="request_by_name" action="/requests" method="GET">
+            <label for="name">Request by Name</label>
+            <input type="text" id="cname" name="cname" placeholder="Name" required>
+        </form>
+        <br></br>
+        <h1><%=title%></h1>
+        <table class="table" id="requests">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">name</th>
+                    <th scope="col">message</th>
+                    <th scope="col">date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if(data.length){
+                for(var i = 0; i< data.length; i++) {%>
+                <tr>
+                    <td><%= data[i].request_id%></td>
+                    <td><%= data[i].cname%></td>
+                    <td><%= data[i].cmessage%></td>
+                    <td><%= data[i].date_of_request%></td>
+                </tr>
+                <% }
+                }else{ %>
+                <tr>
+                    <td colspan="3">No Data Available</td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </body>
+</html>

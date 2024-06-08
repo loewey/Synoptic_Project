@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Data to PostgreSQL</title>
+    </head>
+    <body>
+        <h1><%=title%></h1>
+        <form id="submit_request" action="/submit" method="POST">
+            <label for="name">Name</label>
+            <br></br>
+            <input type="text" id="cname" name="cname" placeholder="Your Name" required>
+            <br></br>
+            <label for="message">Message</label>
+            <br></br>
+            <textarea id="cmessage" name="cmessage" rows="10" cols="50" placeholder="Your Message" required></textarea>
+            <br></br>
+            <input type="hidden" name="date_of_request" id="date_of_request">
+            <input type="submit" id="submit" value="Send">
+        </form>
+        <br></br>
+        <a href="/requests">All requests</a>
+        <script>
+            // set date value when form is submitted
+            document.querySelector('#submit_request').addEventListener('submit', function (event) {
+                // gets current timestamp, date and time
+                const date_of_request = new Date().toLocaleString();
+                document.querySelector('#date_of_request').value = date_of_request;
+            });
+            
+            const form = document.getElementById('submit_request');
+            form.addEventListener('submit', (event)=> {
+                alert('Request submitted');  
+            })        
+        </script>
+    </body>
+</html>
