@@ -297,6 +297,16 @@ h2 {
 
 .snav {
     list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+.snav img {
+    padding-right: 20px;
+    padding-top: 10px;
 }
 
 button {
@@ -350,3 +360,43 @@ button {
     width: 100%;
     display: block;
    }
+   #chooseAvatar{
+    text-align: center;
+   }
+   .main-content-index{
+    display: flex;
+    justify-content: space-evenly;
+   }
+
+   .contact-info{
+    margin-top: 120px;
+    text-align: center;
+   }
+   .contact-info h3,li,p {
+    font-size: larger;
+    font-weight: 400;
+   }
+   
+   .contact-info li {
+    list-style: none;
+   }
+
+   #contact-us{
+    font-weight: 800;
+   }
+
+   .title{
+    font-size: x-large;
+    text-decoration:underline;
+    margin-bottom: 5px;   
+}
+
+    #charity-info{
+        margin-bottom: 20px;
+    }
+
+    .charity-section{
+        margin-left: 1%;
+        margin-top: 3%;
+    }
+
