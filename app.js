@@ -18,14 +18,46 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded());
 
+app.get('/', (req, res) => {
+    res.render('index')
+})
+
+app.get('/male', (req, res) => {
+    res.render('male')
+})
+
+app.get('/female', (req, res) => {
+    res.render('female')
+})
+
+app.get('/head', (req, res) => {
+    res.render('head')
+})
+
+app.get('/left-arm', (req, res) => {
+    res.render('left-arm')
+})
+
+app.get('/left-leg', (req, res) => {
+    res.render('left-leg')
+})
+
+app.get('/right-arm', (req, res) => {
+    res.render('right-arm')
+})
+
+app.get('/right-leg', (req, res) => {
+    res.render('right-leg')
+})
+
+app.get('/torso', (req, res) => {
+    res.render('torso')
+})
+
 app.get('/form', (req, res) => {
     res.render('form', {title:"Submit a new request"})
 })
 client.connect();
-
-app.get('/', (req, res) => {
-    res.render('index', {title:"Submit a new request"})
-})
 
 
 app.get('/requests', (req, res)=>{
@@ -82,6 +114,11 @@ app.post('/submit', (req, res) => {
 
     });
 });
+
+
+app.get('/charityinformation', (req, res) => {
+    res.render('charityinformation')
+})
 
 
 
