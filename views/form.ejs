@@ -4,23 +4,44 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Form Data to PostgreSQL</title>
+        <link rel="stylesheet" href="eCare.css">
+        <script src="index.js" defer></script>
     </head>
     <body>
-        <h1><%=title%></h1>
-        <form id="submit_request" action="/submit" method="POST">
-            <label for="name">Name</label>
-            <br></br>
-            <input type="text" id="cname" name="cname" placeholder="Your Name" required>
-            <br></br>
-            <label for="message">Message</label>
-            <br></br>
-            <textarea id="cmessage" name="cmessage" rows="10" cols="50" placeholder="Your Message" required></textarea>
-            <br></br>
-            <input type="hidden" name="date_of_request" id="date_of_request">
-            <input type="submit" id="submit" value="Send">
-        </form>
-        <br></br>
-        <a href="/requests">All requests</a>
+        <header>
+            <div class="logo_flex">
+                <figure class="logo_image">
+                    <a href="/"><img src="photos/logo.png" alt="logo"></a>
+                </figure>
+                <h1 class="logo">eCare</h1>
+            </div>
+        <nav id="primary_nav">
+            <ul class="primary_nav">
+                <li class="pnav active"><a href="/"><button>Home</button></a></li>
+                <li class="pnav"><a href="/male"><button>Male</button></a></li>
+                <li class="pnav"><a href="/female"><button>Female</button></a></li>
+                <li class="pnav"><a href="/form"><button>Form</button></a></li>
+                <li class="pnav"><a href="/requests"><button>All Requests</button></a></li>
+                <li class="pnav"><a href="/charityinformation"><button>Charity Information</button></a></li>
+            </ul>
+        </nav>
+        </header>
+        <h1 id="formTitle"><%=title%></h1>
+        <div id="formContainer">
+            <form id="submit_request" action="/submit" method="POST">
+                <fieldset id="fieldset">
+                    <legend>Your request</legend>
+                    <label for="name">Name</label>
+                    <input type="text" id="cname" name="cname" placeholder="Name" required>
+                    <br></br>
+                    <label for="message">Request</label>
+                    <textarea id="cmessage" name="cmessage" rows="10" cols="50" placeholder="Request" required></textarea>
+                    <br></br>
+                    <input type="hidden" name="date_of_request" id="date_of_request">
+                    <input type="submit" id="submit" value="Send Request">
+                </fieldset>
+            </form>
+        </div>
         <script>
             // set date value when form is submitted
             document.querySelector('#submit_request').addEventListener('submit', function (event) {

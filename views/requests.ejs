@@ -28,10 +28,27 @@
               color: white;
             }
         </style>
+        <link rel="stylesheet" href="eCare.css">
 	</head>
     <body>
-        <a href="/form">Add a request</a>
-        <br></br>
+        <header>
+            <div class="logo_flex">
+                <figure class="logo_image">
+                    <a href="/"><img src="photos/logo.png" alt="logo"></a>
+                </figure>
+                <h1 class="logo">eCare</h1>
+            </div>
+        <nav id="primary_nav">
+            <ul class="primary_nav">
+                <li class="pnav active"><a href="/"><button>Home</button></a></li>
+                <li class="pnav"><a href="/male"><button>Male</button></a></li>
+                <li class="pnav"><a href="/female"><button>Female</button></a></li>
+                <li class="pnav"><a href="/form"><button>Form</button></a></li>
+                <li class="pnav"><a href="/requests"><button>All Requests</button></a></li>
+                <li class="pnav"><a href="/charityinformation"><button>Charity Information</button></a></li>
+            </ul>
+        </nav>
+        </header>
         <% if(requestType == "name"){%>
             <a href="/requests">All requests</a>
         <%} %>
