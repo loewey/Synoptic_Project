@@ -90,7 +90,7 @@ main {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Creates 4 equal-width columns */
     grid-gap: 50px; /* Adjust spacing between cards */
-    margin-left: 130px;
+    /* margin-left: 130px; */
 }
 
 .flip-card {
@@ -399,4 +399,37 @@ button {
         margin-left: 1%;
         margin-top: 3%;
     }
+
+#formTitle {
+    text-align: center;
+}
+
+#formContainer {
+    display: block;
+    text-align: center;
+}
+
+#submit_request {
+    display: inline-block;
+}
+
+fieldset {
+    margin: 2em 0;
+    padding: 1em 2em;
+    border: solid 2px #b73434;
+    border-radius: 6px;
+    max-width: 200px;
+}
+
+legend {
+    font-size: 1.25em;
+    padding: 0.25em;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 1em;
+}
+
 
